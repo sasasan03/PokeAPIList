@@ -4,13 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pokeapilist.databinding.FragmentPokeListBinding
 import kotlinx.coroutines.launch
-import retrofit2.Retrofit
 
 class PokeListFragment: Fragment() {
     private var _binding: FragmentPokeListBinding? = null
@@ -48,6 +46,7 @@ class PokeListFragment: Fragment() {
         }
     }
 
+    // メモリを解放
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
